@@ -1,24 +1,6 @@
-import EmberObject, { computed } from '@ember/object';
 import Route from '@ember/routing/route';
-
-var Band = EmberObject.extend({
-  name: '',
-  language: '',
-
-  slug: computed('name', function() {
-    return this.get('name').dasherize();
-  }),
-
-  site: computed('slug', 'language', function () {
-    return 'http://bands.com/' + this.get('slug') + '.' + this.get('language');
-  })
-});
-
-var Song = EmberObject.extend({
-  title: '',
-  band: '',
-  rating: 0
-});
+import Band from 'rarwe/models/band';
+import Song from 'rarwe/models/song';
 
 export default Route.extend({
   model: function () {
@@ -62,5 +44,15 @@ export default Route.extend({
     });
 
     return [ledZeppelin, pearlJam, fooFighters];
+  },
+
+  actions: {
+    createBand () {
+      var name = this.get('controller').get('name');
+      var band = Band.create({ name: name });
+
+      this.modelFor('bands').pushObject(band);
+      this.get('controller').set('name', '');
+    }
   }
 });
