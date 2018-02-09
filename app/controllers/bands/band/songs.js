@@ -10,6 +10,13 @@ export default Controller.extend({
     enableSongCreation () {
       this.set('songCreationStarted', true);
     },
+
+    updateRating (params) {
+      var song = params.item,
+          rating = params.rating;
+
+      song.set('rating', rating);
+    }
   },
 
   isAddButtonDisabled: computed('title', function () {
