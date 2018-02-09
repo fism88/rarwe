@@ -5,6 +5,8 @@ module.exports = {
   globals: {
     assertTrimmedText: false,
     assertLength: false,
-    assertElement: false
+    assertElement: false,
+    selectBand: false,
+    submit: false
   }
 };
