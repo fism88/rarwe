@@ -2,10 +2,6 @@ import Route from '@ember/routing/route';
 import Song from 'rarwe/models/song';
 
 export default Route.extend({
-  model: function () {
-    return this.modelFor('bands.band');
-  },
-
   actions: {
     createSong () {
       var controller = this.get('controller');
@@ -16,5 +12,9 @@ export default Route.extend({
       band.get('songs').pushObject(song);
       controller.set('title', '');
     },
+  },
+
+  resetController: function (controller) {
+    controller.set('songCreationStarted', false);
   }
 });

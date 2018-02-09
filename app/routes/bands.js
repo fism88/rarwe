@@ -35,7 +35,9 @@ export default Route.extend({
 
     var pearlJam = Band.create({
       name: 'Pearl Jam',
-      songs: [yellowLedbetter, daughter]
+      songs: [yellowLedbetter, daughter],
+      description: 'Pearl Jam is an American rock band, formed\
+       in Seattle, Washington in 1990.',
     });
 
     var fooFighters = Band.create({
