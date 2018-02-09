@@ -1,7 +1,7 @@
-import Route from '@ember/routing/route';
+import DS from 'ember-data';
 
-export default Route.extend({
-  title: '',
-  band: null,
-  rating: 0
+export default DS.Model.extend({
+  title: DS.attr('string'),
+  band: DS.belongsTo('band'),
+  rating: DS.attr('number')
 });

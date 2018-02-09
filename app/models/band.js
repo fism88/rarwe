@@ -1,18 +1,7 @@
-import { computed } from '@ember/object';
-import Route from '@ember/routing/route';
+import DS from 'ember-data';
 
-export default Route.extend({
-  description: '',
-  name: '',
-
-  init () {
-    this._super(...arguments);
-    if (!this.get('songs')) {
-      this.set('songs', []);
-    }
-  },
-
-  slug: computed('name', function() {
-    return this.get('name').dasherize();
-  }),
+export default DS.Model.extend({
+  description: DS.attr(),
+  name: DS.attr('string'),
+  songs: DS.hasMany('song'),
 });
