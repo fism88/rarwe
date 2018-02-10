@@ -1,7 +1,8 @@
 # rarwe
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This application can be viewed at http://secret-coast-22594.herokuapp.com/bands/1/details.
+
+Based on Rock and Roll with Ember.js by Balint Erdi.
 
 ## Prerequisites
 
@@ -11,11 +12,11 @@ You will need the following things properly installed on your computer.
 * [Node.js](https://nodejs.org/)
 * [Yarn](https://yarnpkg.com/)
 * [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+* Any modern browser
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone git@github.com:fism88/rarwe.git` this repository
 * `cd rarwe`
 * `yarn install`
 
@@ -24,10 +25,6 @@ You will need the following things properly installed on your computer.
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 * Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
 
 ### Running Tests
 
@@ -38,10 +35,6 @@ Make use of the many generators for code, try `ember help generate` for more det
 
 * `ember build` (development)
 * `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
 
 ## Further Reading / Useful Links
 
