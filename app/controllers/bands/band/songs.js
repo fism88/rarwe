@@ -3,6 +3,8 @@ import { computed } from '@ember/object';
 import { sort } from '@ember/object/computed';
 import { isEmpty } from '@ember/utils';
 
+import { capitalize } from 'rarwe/helpers/capitalize';
+
 export default Controller.extend({
   actions: {
     enableSongCreation () {
@@ -36,6 +38,11 @@ export default Controller.extend({
     return this.get('model.songs').filter(function (song) {
       return song.get('title').toLowerCase().indexOf(searchTerm) !== -1;
     });
+  }),
+
+  newSongPlaceholder: computed('model.name', function () {
+    var bandName = this.get('model.name');
+    return `New ${capitalize(bandName)} song`;
   }),
 
   queryParams: {
