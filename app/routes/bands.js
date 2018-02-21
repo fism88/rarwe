@@ -1,7 +1,7 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  model: function () {
+  model () {
     return this.store.findAll('band');
   },
 
@@ -17,7 +17,7 @@ export default Route.extend({
       });
     },
 
-    didTransition: function () {
+    didTransition () {
       document.title = 'Bands - Rock & Roll';
     }
   }

@@ -18,14 +18,14 @@ export default Route.extend({
       });
     },
 
-    didTransition: function () {
+    didTransition () {
       var band = this.modelFor('bands.band');
       var name = capitalizeWords(band.get('name'));
       document.title = `${name} songs - Rock & Roll`;
     }
   },
 
-  resetController: function (controller) {
+  resetController (controller) {
     controller.set('songCreationStarted', false);
   }
 });

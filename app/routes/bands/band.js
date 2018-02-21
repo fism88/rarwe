@@ -2,11 +2,11 @@ import Route from '@ember/routing/route';
 import { isEmpty } from '@ember/utils';
 
 export default Route.extend({
-  model: function (params) {
+  model (params) {
     return this.store.findRecord('band', params.id);
   },
 
-  afterModel: function (band) {
+  afterModel (band) {
     var description = band.get('description');
     if (isEmpty(description)) {
       this.transitionTo('bands.band.songs');

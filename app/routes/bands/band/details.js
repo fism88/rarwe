@@ -2,7 +2,7 @@ import Route from '@ember/routing/route';
 
 export default Route.extend({
   actions: {
-    willTransition: function (transition) {
+    willTransition (transition) {
       var controller = this.get('controller'),
           leave;
 
@@ -17,7 +17,7 @@ export default Route.extend({
       }
     },
 
-    save: function () {
+    save () {
       var controller = this.get('controller'),
         band = controller.get('model');
 
